@@ -5,7 +5,7 @@
 - 後端採 PDO prepared statements，避免 SQL injection
 - 資料庫必須由題目提供的 `init.sql` 建立（不可自行建表）
 
-## B. 資料庫建立（含指令）
+## B. 資料庫建立
 
 ### 方法1：phpMyAdmin
 1. 建立資料庫 `選課系統`
@@ -30,7 +30,7 @@ mysql -u root -e "USE \`選課系統\`; SHOW TABLES;"
 - `DB_PASS`：密碼（預設空字串）
 - `DB_NAME`：資料庫名稱（預設 `選課系統`）
 
-## D. 啟動方式（重點）
+## D. 啟動方式
 - macOS：雙擊 `run.command`
 - Windows：雙擊 `run.bat`
 - 手動啟動：在專案根目錄執行 `php -S localhost:8000 -t .`，再用瀏覽器開 `http://localhost:8000/`
@@ -38,7 +38,7 @@ mysql -u root -e "USE \`選課系統\`; SHOW TABLES;"
 注意：必須透過 Web Server 執行 PHP，不能用 Finder 直接打開 `.php` 或 `.html` 檔案。
 若 macOS 無法直接雙擊執行，可先在終端機執行 `chmod +x run.command`。
 
-## E. 系統操作流程（助教驗收順序）
+## E. 系統操作流程
 1. 首頁：三個入口（學生管理 / 課程管理 / 成績管理）
 2. 學生管理：列表、CRUD、依科系篩選
 3. 課程管理：列表（選課人數/平均成績）、點選人數查看學生名單、CRUD、刪除限制（有選修不可刪）、依科系篩選、課程關鍵字搜尋
